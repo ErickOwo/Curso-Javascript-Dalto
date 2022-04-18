@@ -3,7 +3,7 @@ const divResultado = document.createElement("DIV");
 divResultado.classList.add("resultado");
 formulario.appendChild(divResultado);
 
-const nombre = document.getElementById("nombre");
+const nameInput = document.getElementById("name");
 const email = document.getElementById("email");
 const materia = document.getElementById("materia");
 const boton = document.getElementById("btn-enviar");
@@ -11,8 +11,8 @@ const boton = document.getElementById("btn-enviar");
 boton.addEventListener("click",(e)=>{
     e.preventDefault();
     let error = validarCampos();
-    if (error[0]){
-        divResultado.innerHTML = error[1];
+    if (error){
+        divResultado.innerHTML = error;
         divResultado.classList.add("red");
     }
     else{
@@ -22,38 +22,20 @@ boton.addEventListener("click",(e)=>{
     }
 });
 const validarCampos = ()=>{
-    let error = [];
-    if(nombre.value.length < 4){
-        error[0] = true;
-        error[1] = "El nombre no puede contener menos de 4 caracteres";
-        return error;
+    const nameValue = nameInput.value.trim();
+    const emailValue = email.value.trim();
+    const materiaValue = materia.value.trim();
+
+    if(!/[a-z]{3,40}/i.test(nameValue) || /[\d\-\\\/@!?¿¡_\[\]\(\)]+/.test(nameValue)){
+        return error = `El nombre no puede contener menos de 3 o más de 40 letras, ni números, ni los siguientes caracteres "-\/¡!¿?_[]()"`;
+
     }
-    else if(nombre.value.length > 40){
-        error[0] = true;
-        error[1] = "El nombre no puede Contener más de 40 caracteres"
-        return error;
+    else if(!/[\w\.]{5,30}\+?\w{0,10}@[\w\.\-]{3,}\.\w{2,3}/i.test(emailValue)){
+        return error = "El email no es valido";
     }
-    else if(email.value.length < 4 || email.length > 40){
-        error[0] = true;
-        error[1] = "El email no es valido"
-        return error;
+    else if(!/\w{4,15}/i.test(materiaValue)){
+        return error = "La materia no es valida";
     }
-    else if(email.value.indexOf("@") == -1){
-        error[0] = true;
-        error[1] = `El email no contiene "@"`
-        return error;
-    }
-    else if(email.value.indexOf(".") == -1){
-        error[0] = true;
-        error[1] = `El email no contiene "."`
-        return error;
-    }
-    else if(materia.value.length < 4 || materia.length > 40){
-        error[0] = true;
-        error[1] = "La materia no es valida";
-        return error;
-    }
-    return error[0] = false;
 }
 
 //{}[] ||
