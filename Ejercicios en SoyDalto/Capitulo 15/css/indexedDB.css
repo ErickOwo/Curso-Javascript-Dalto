@@ -1,0 +1,69 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    overflow: hidden;
+}
+h2 {
+    margin: 0;
+    padding: 0;
+}
+.add {
+    display: flex;
+    background-color: #79f;
+    padding: 40px 0;
+    justify-content: center;
+    width: 100%;
+}
+#name {
+    margin:0 20px;
+    padding: 4px;
+    outline: none;
+    border: none;
+    background-color: #fff;
+}
+#name::placeholder {
+    color: #aaa;
+}
+#addButton {
+    background-color: #fff;
+    border: none;
+    padding: 0 10px;
+}
+.nombres {
+    padding: 20px;
+    width: 100%;
+}
+.contenedor {
+    display: grid;
+    justify-content: center;
+    padding: 10px;
+    grid-template-columns: minmax(70px, 1fr) 160px;
+    border-top: 1px solid #45e;
+    max-width: 500px;
+    margin: auto;
+}
+.contenedor h2 {
+    font-size: 21px;
+    color: #45e;
+    outline: #45e;
+}
+.contenedor h2:focus {
+    outline: #45e 1px solid;
+}
+.options {
+    display: grid;
+    justify-self: flex-end;
+    grid-template-columns: repeat(2, 70px);
+}
+.options button{
+    background: none;
+    border: none;
+}
+.impossible{
+    color: #c0c0c0;
+}
+.possible{
+    color: #45e;
+}

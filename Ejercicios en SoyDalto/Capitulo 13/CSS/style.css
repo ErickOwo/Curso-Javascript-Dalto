@@ -1,0 +1,12 @@
+body{
+    size: 35px;
+}
+
+.form{
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+.resultado{
+    background-color: #ddd;
+    padding: 20px;
+}

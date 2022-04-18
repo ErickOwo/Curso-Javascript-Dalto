@@ -1,0 +1,47 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #090329;
+    box-sizing: border-box;
+}
+.img{
+    width: 100%;
+}
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.item{
+    max-width: 180px;
+    padding: 20px;
+    margin: 20px 25px;
+    border: 1px solid #f6ffc5;
+    background-color: #eee;
+}
+.item:hover{
+    border: 1px solid #000;
+    box-shadow: 0 0 20px #bbb;
+}
+.item:focus{
+    border: 1px solid #000;
+    box-shadow: 0 0 20px #bbb;
+}
+.item p{
+    color: #272727;
+}
+.item b{
+    color: #383;
+}
+form .enviar{
+    background-color: #fff;
+    border: 1px solid #bbb;
+    width: 90px;
+    height: 30px;
+    margin: 40px;
+    background-color: #383;
+    color: #fff;
+}

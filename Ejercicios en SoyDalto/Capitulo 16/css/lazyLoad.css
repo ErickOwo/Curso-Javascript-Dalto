@@ -1,0 +1,49 @@
+body, h3, p {
+    margin: 0;
+    padding: 0;
+}
+.post {
+    color: #666;
+    max-width: 600px;
+    margin: 20px auto;
+    animation: appear 1s forwards;
+}
+.post h3 {
+    display: inline-block;
+    margin-bottom: 5px;
+    border-bottom: #57e solid 2px;
+    margin: 0;
+}
+.post p {
+    padding: 20px;
+    border-left: #57e solid 2px;
+}
+.comments {
+    display: flex;
+}
+.comments input {
+    border: none;
+    outline: none;
+    background-color: #57e;
+    padding: 6px 10px;
+    color: #fff;
+}
+.comment {
+    flex: 1;
+}
+.comment::placeholder {
+    color: #bcf;
+}
+#no-more {
+    text-align: center;
+    padding: 26px;
+}
+
+@keyframes appear{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

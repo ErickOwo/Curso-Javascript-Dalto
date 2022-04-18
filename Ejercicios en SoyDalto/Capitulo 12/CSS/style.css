@@ -1,0 +1,33 @@
+body{
+    font-family: sans-serif;
+    color: #222;
+}
+*{
+    box-sizing: border-box;   
+}
+.materias{
+    width: 90%;
+    background-color: #03a;
+    padding: 10px;
+}
+.materias .materia{
+    display: flex;
+    color: #fff;
+    margin: 3px;
+    border: 1px #fff solid;
+}
+.materias .materia b{
+    margin-right: 6px;
+}
+.materia .nombre{
+    flex: 1;
+    padding: 20px;
+    background-color: #0f4faf;
+}
+.materia .nota{
+    width: 30px;
+    font-weight: 700;
+    background-color: #0030a0;
+    text-align: center;  
+    padding: 20px 30px;
+}

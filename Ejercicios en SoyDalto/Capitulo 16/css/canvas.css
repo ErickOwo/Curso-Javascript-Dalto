@@ -1,0 +1,13 @@
+canvas{
+    border: 1px solid #000;
+}
+h2{
+    text-align: center;
+}
+.dibujo{
+    width: fit-content;
+    margin: auto;
+}
+.options{
+    background-color: #000;
+}

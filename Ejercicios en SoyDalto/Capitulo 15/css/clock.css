@@ -1,0 +1,83 @@
+body {
+    background-color: #222;
+    background-image: url("https://www.xtrafondos.com/wallpapers/rick-and-morty-en-nave-4518.jpg");
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    font-family: sans-serif;
+}
+*{
+    box-sizing: border-box;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #2228;
+    height: 100vh;
+    justify-content: center;
+}
+.reloj {
+    margin: 10;
+    background: linear-gradient(to top, #ccc2, #9992);
+    display: flex;
+    border-radius: 30px;
+    border: 3px solid #fff8;
+    user-select: none;
+}
+.reloj div {
+    padding: 10px;
+    font-size: 60px;
+    font-family: monospace;
+    color: #fff;
+    
+}
+.reloj .min {
+    border-left: 2px solid #fff8;
+    border-right: 2px solid #fff8;
+}
+.now {
+    margin: auto;
+    margin-top: 0;
+    color: #fff;
+    display: flex;
+    font-size: 20px;
+    flex-wrap: wrap;
+}
+.now div {
+    padding: 3px;
+}
+
+@media only screen and (min-width: 500px){
+    .reloj div {
+        padding: 40px;
+        font-size: 90px;
+    }
+    .now {
+        margin: auto;
+        margin-top: 10px;
+        color: #fff;
+        display: flex;
+        font-size: 20px;
+        flex-wrap: wrap;
+    }
+}
+@media only screen and (min-width: 1100px){
+    .container {
+        flex-direction: column;
+        padding: 50px 0;
+        height: auto;
+        background-color: #222a;
+    }
+    .reloj {
+        margin: 20px auto;
+    }
+    .reloj div{
+        padding: 45px;
+        font-size: 150px;
+    }
+    .now {
+        margin-top: 40px;
+    }
+}

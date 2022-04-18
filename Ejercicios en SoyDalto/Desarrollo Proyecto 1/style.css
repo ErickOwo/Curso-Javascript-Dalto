@@ -1,0 +1,69 @@
+:root {
+    --color: #59b;
+}
+* {
+    font-family: sans-serif, Arial, Helvetica;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+input {
+    outline: none;
+    text-shadow: none;
+    border: none;
+}
+#add-space {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 50px;
+    background-color: var(--color);
+}
+#name, #add {
+    padding: 5px 7px;
+}
+#add {
+    margin-left: 20px;
+    border: none;
+}
+.container {
+    display: grid;
+    justify-content: center;
+    max-width: 500px;
+    grid-template-columns: 300px 100px;
+    margin: 14px auto;
+    padding: 10px;
+    border-top: 1px solid var(--color);
+}
+.content {
+    margin: 0;
+    margin-right: 95px;
+    text-align: center;
+}
+.content:focus {
+    outline: var(--color) 1px solid;
+}
+#saveButton {
+    width: 70px;
+    border: none;
+    background: none;
+    user-select: none;
+}
+.impossible {
+    color: #bbb;
+}
+.possible {
+    color: var(--color);
+}
+#delete-zone {
+    display: flex;
+    justify-content: center;
+}
+#icon-delete {
+    font-size: 55px;
+    margin: 50px;
+    color: var(--color);
+    transition: .4s;
+}
